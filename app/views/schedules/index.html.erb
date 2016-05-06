@@ -50,7 +50,7 @@
           <tr>
             <td><%= schedule.place %></td>
             <td><%= schedule.date %></td>
-            <td><a href="/schedules/<%= schedule.id %>"><%= schedule.content %></td>
+            <td><%= link_to "#{schedule.content}", "/schedules/" + "#{schedule.id}", "data-turbolinks-track" => true, :method => "get"%></td>
             <td><%= schedule.users.length %>/<%= schedule.people %></td>
             <td><%= schedule.kikan %></td>
             <% if schedule.users.length < schedule.people %>

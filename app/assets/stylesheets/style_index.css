@@ -31,8 +31,19 @@ padding:5px 0 0;
 }
 
 * html #header{height:1%;}
+.navbar .navbar-toggle:focus, .navbar .navbar-toggle:hover{
+  background-color: #ec5e5f;
+  border-color: #ec5e5f;
+}
+.navbar .navbar-toggle:focus, .navbar .navbar-toggle{
+  background-color: #ec5e5f;
+  border-color: #ec5e5f;
+}
 
-
+.navbar .navbar-toggle:hover, .navbar .navbar-toggle:focus{
+  background-color: #ec5e5f;
+  border-color: #ec5e5f;
+}
 /*************
 /* ロゴ
 *************/
@@ -525,4 +536,3 @@ tbody {
     font-size: 50%;
 }
 }
-
