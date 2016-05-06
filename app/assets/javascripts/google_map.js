@@ -3,7 +3,7 @@ window.onload = function(){
 var canvas = document.getElementById( 'map-canvas' ) ;
 
 // 中心の位置座標を指定する
-var latlng = new google.maps.LatLng( 35.792621 , 139.806513 );
+var latlng = new google.maps.LatLng(35.9079725 , 139.6193528);
 
 // 地図のオプションを設定する
 var mapOptions = {
