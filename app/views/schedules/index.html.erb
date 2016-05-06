@@ -1,0 +1,71 @@
+<div id="header">
+  <div class="inner">
+    <div class="logo">
+<!--       <%= link_to image_tag('teniss_001.png'), '/' %> -->
+  <h2>試合スケジュール</h2>
+    </div>
+    <!-- / ロゴ -->
+    <!-- 電話番号+受付時間 -->
+    <div class="info">
+      <p class="tel">電話: <strong>012-3456-7890</strong></p>
+      <p>受付時間: 平日 AM 10:00 〜 PM 5:00</p>
+    </div>
+    <!-- / 電話番号+受付時間 -->
+
+
+
+  <!-- トップナビゲーション -->
+  <ul id="topnav">
+    <li><a href="/">トップページ<br><span>Top</span></a></li>
+    <li><a href="//#two">TiAju Cupとは<br><span>About</span></a></li>
+    <li><a href="/schedules/">試合スケジュール<br><span>Schedule</span></a></li>
+    <li><a href="//#three">写真<br><span>Photos</span></a></li>
+    <li><a href="/member/">運営グループ<br><span>Member</span></a></li>
+    <li><a href="/contact/">お問い合わせ<br><span>Contact</span></a></li>
+  </ul>
+  <!-- トップナビゲーション -->
+
+  </div>
+
+</div>
+<div id="wrapper">
+
+  <!-- 4カラム -->
+  <section id="one" class="gridWrapper">
+    <article>
+      <h3>試合スケジュール</h3>
+      <table>
+        <tread>
+          <tr>
+            <th>会場</th>
+            <th>日時</th>
+            <th>種目</th>
+            <th>定員</th>
+            <th>申し込み期間</th>
+            <th>在庫</th>
+          </tr>
+        </tread>
+        <% @schedules.each do |schedule| %>
+        <tbody>
+          <tr>
+            <td><%= schedule.place %></td>
+            <td><%= schedule.date %></td>
+            <td><a href="/schedules/<%= schedule.id %>"><%= schedule.content %></td>
+            <td><%= schedule.users.length %>/<%= schedule.people %></td>
+            <td><%= schedule.kikan %></td>
+            <% if schedule.users.length < schedule.people %>
+            <td><a href="/schedules/<%= schedule.id %>">購入</td>
+            <% elsif schedule.users.length >= schedule.people %>
+            <td>無</td>
+            <% end %>
+          </tr>
+        </tbody>
+        <% end %>
+      </table>
+    </article>
+    <article>
+      <h3>本日の試合のお知らせ</h3>
+      <p>雨天のため中止とさせていただきます。</p>
+    </article>
+  </section>
+</div>

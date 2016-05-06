@@ -1,0 +1,70 @@
+<% if current_user.id == @user.id %>
+  <div class="profile_edit">
+    <%= link_to "プロフィール編集", edit_user_path(current_user), {:class => "btn btn-primary withripple" }%>
+  </div>
+<div id="header">
+  <div class="inner">
+    <div class="logo">
+<!--       <%= link_to image_tag('teniss_001.png'), '/' %> -->
+  <h2>マイページ</h2>
+    </div>
+    <!-- / ロゴ -->
+    <!-- 電話番号+受付時間 -->
+    <div class="info">
+      <p class="tel">電話: <strong>012-3456-7890</strong></p>
+      <p>受付時間: 平日 AM 10:00 〜 PM 5:00</p>
+    </div>
+    <!-- / 電話番号+受付時間 -->
+
+
+
+  <!-- トップナビゲーション -->
+  <ul id="topnav">
+    <li><a href="/">トップページ<br><span>Top</span></a></li>
+    <li><a href="//#two">TiAju Capとは<br><span>About</span></a></li>
+    <li><a href="/schedules/">試合スケジュール<br><span>Schedule</span></a></li>
+    <li><a href="//#three">写真<br><span>Photos</span></a></li>
+    <li><a href="/member/">運営グループ<br><span>Member</span></a></li>
+    <li><a href="/contact/">お問い合わせ<br><span>Contact</span></a></li>
+  </ul>
+  <!-- トップナビゲーション -->
+
+  </div>
+
+</div>
+<div id="wrapper">
+
+<section id="ticket-info" class="section-large">
+<p class="h-large h-large-ico ticket-info">購入したチケット一覧</p>
+  <div class="box">
+    <div class="module-ticket-info clearfix">
+      <div class ="main">
+        <table>
+          <tread>
+              <tr>
+                <th>会場</th>
+                <th>日時</th>
+                <th>種目</th>
+                <th>定員</th>
+                <th>申し込み期間</th>
+                <th>チケットを取り消す</th>
+              </tr>
+          </tread>
+          <% @buy_things.each do |thing| %>
+          <tbody>
+            <tr>
+              <td><%= thing.place %></td>
+              <td><%= thing.date %></td>
+              <td><a href="/schedules/<%= thing.id %>"><%= thing.content %></td>
+              <td><%= thing.people %></td>
+              <td><%= thing.kikan %></td>
+              <td>削除</td>
+            </tr>
+          </tbody>
+          <% end %>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+<% end %>

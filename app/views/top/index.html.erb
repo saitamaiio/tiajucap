@@ -1,0 +1,138 @@
+<div id="header">
+  <div class="inner">
+    <div class="logo">
+<!--       <%= link_to image_tag('teniss_001.png'), '/' %> -->
+      <a href="/">TiAju Cup<br><span>enjoy tennis match</span></a>
+    </div>
+    <!-- / ロゴ -->
+    <!-- 電話番号+受付時間 -->
+    <div class="info">
+      <p class="tel">電話: <strong>012-3456-7890</strong></p>
+      <p>受付時間: 平日 AM 10:00 〜 PM 5:00</p>
+    </div>
+    <!-- / 電話番号+受付時間 -->
+
+
+
+  <!-- トップナビゲーション -->
+  <ul id="topnav">
+    <li><a href="/">トップページ<br><span>Top</span></a></li>
+    <li><a href="#two">TiAju Cupとは<br><span>About</span></a></li>
+    <li><a href="/schedules/">試合スケジュール<br><span>Schedule</span></a></li>
+    <li><a href="#three">写真<br><span>Photos</span></a></li>
+    <li><a href="/member/">運営グループ<br><span>Member</span></a></li>
+    <li><a href="/contact/">お問い合わせ<br><span>Contact</span></a></li>
+  </ul>
+  <!-- トップナビゲーション -->
+
+  </div>
+
+</div>
+<!-- / ヘッダー -->
+
+<!-- メイン画像 -->
+<div id="mainBanner" class="mainImg">
+  <div class="inner">
+    <%= image_tag 'tennis_003.jpg' ,:width => "940" ,:height => "300" ,:alt => ""%>
+<!--     <div class="slogan">
+      <h2>Tiaju Cupはみなさんにテニスの試合を楽しんでもらうことを目指しています</h2>
+      <h3>Enjou Tennis Life!!!!</h3>
+    </div> -->
+  </div>
+</div>
+<!-- / メイン画像 -->
+
+<div id="wrapper">
+
+  <!-- 4カラム -->
+  <section id="one" class="gridWrapper">
+    <article>
+      <h3>試合スケジュール</h3>
+      <table >
+        <tread>
+          <tr>
+            <th>会場</th>
+            <th>日時</th>
+            <th>種目</th>
+            <th>定員</th>
+            <th>申し込み期間</th>
+            <th>在庫</th>
+          </tr>
+        </tread>
+        <% @schedules.each do |schedule| %>
+        <tbody>
+          <tr>
+            <td><%= schedule.place %></td>
+            <td><%= schedule.date %></td>
+            <td><a href="/schedules/<%= schedule.id %>"><%= schedule.content %></td>
+            <td><%= schedule.users.length %>/<%= schedule.people %></td>
+            <td><%= schedule.kikan %></td>
+            <% if schedule.users.length < schedule.people %>
+            <td><a href="/schedules/<%= schedule.id %>">購入</td>
+            <% elsif schedule.users.length >= schedule.people %>
+            <td>無</td>
+            <% end %>
+          </tr>
+        </tbody>
+        <% end %>
+      </table>
+    </article>
+  </section>
+  <section id="two" class="gridWrapper">
+    <article>
+      <h3>本日の試合のお知らせ</h3>
+      <p>雨天のため中止とさせていただきます。</p>
+    </article>
+  </section>
+  <section id="three" class="gridWrapper">
+    <article>
+      <h3>About TiAju Cup</h3>
+      <p>初心者〜中級者までが上達するための大会です。<br>
+      普段なかなか練習する機会がない方、試合経験を積みたい方、苦手なショットを克服したい方、どんな方でも歓迎です。
+      レベル別で試合を分けているので、同じ実力を持っている方と試合ができるので、安心して参加できます</p>
+    </article>
+  </section>
+
+  <section class="content" id="gallery" id="three">
+    <h3 class="heading">写真ギャラリー</h3>
+      <article class="gridWrapper">
+        <figure class="grid"><%= image_tag 'tennis_sample_001.jpg'%></figure>
+        <figure class="grid"><%= image_tag 'tennis_sample_002.jpg'%></figure>
+        <figure class="grid"><%= image_tag 'tennis_sample_003.JPG'%></figure>
+        <figure class="grid"><%= image_tag 'tennis_sample_004.jpg'%></figure>
+        <figure class="grid"><%= image_tag 'tennis_sample_005.jpg'%></figure>
+        <figure class="grid"><a href="subpage.html"><img src="images/gallery6.jpg" width="210" height="210" alt=""></a></figure>
+      </article>
+  </section>
+
+</section>
+
+</div>
+<!-- / WRAPPER -->
+
+<!-- フッター -->
+<div id="footer">
+  <div class="inner">
+
+    <!-- 3カラム -->
+    <section class="gridWrapper">
+
+      <article class="grid">
+        <!-- ロゴ -->
+        <p class="logo"><a href="/">TiAju Cap<br><span>enjoy tennis match</span></a></p>
+        <!-- / ロゴ -->
+      </article>
+      <article class="grid col3">
+        <ul>
+          <li><a href="subpage.html">サービス概要</a></li>
+          <li><a href="subpage.html">会社情報</a></li>
+          <li><a href="subpage.html">お問い合わせ</a></li>
+          <li><a href="subpage.html">サイトマップ</a></li>
+        </ul>
+        <p>Copyright(c) 2016 TiAgu Cap. All Rights Reserved.
+      </article>
+    </section>
+    <!-- / 3カラム -->
+
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<% if user_signed_in? %>
+<section id="ticket-info" class="section-large">
+<p class="h-large h-large-ico ticket-info">チケット情報</p>
+  <div class="box">
+    <div class="module-ticket-info clearfix">
+      <div class ="main">
+        <table>
+          <tread>
+              <tr>
+                <th>会場</th>
+                <th>日時</th>
+                <th>種目</th>
+                <th>定員</th>
+                <th>申し込み期間</th>
+              </tr>
+          </tread>
+          <tbody>
+              <tr>
+                <td><%= @schedule.place %></td>
+                <td><%= @schedule.date %></td>
+                <td><%= @schedule.content %></td>
+                <td><%= @schedule.people %></td>
+                <td><%= @schedule.kikan %></td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+  <div class="form_schedule">
+    <%= form_tag('/schedules', method: :post) do %>
+      <%= hidden_field :schedule, :id %>
+      <input type="submit">
+    <% end %>
+  </div>
+<% else %>
+<% end %>
