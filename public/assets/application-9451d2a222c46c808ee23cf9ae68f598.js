@@ -15390,7 +15390,7 @@ $(function($) {
     //.hogeの中にあるdivの高さを全て同じにする
     equalHeight($("section"));
   });
-})(jQuery);
+});
 window.onload = function(){
 // キャンパスの要素を取得する
 var canvas = document.getElementById( 'map-canvas' ) ;
