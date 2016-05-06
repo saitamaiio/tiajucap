@@ -28,11 +28,14 @@
     </div>
   </div>
 </section>
-  <div class="form_schedule">
-    <%= form_tag('/schedules', method: :post) do %>
-      <%= hidden_field :schedule, :id %>
-      <input type="submit">
-    <% end %>
-  </div>
+<div class="form_schedule">
+  <%= form_tag('/schedules', method: :post) do %>
+    <%= hidden_field :schedule, :id %>
+    <input type="submit">
+  <% end %>
+</div>
+<div class="map-embed">
+  <div id="map-canvas">ここに地図が表示されます</div>
+</div>
 <% else %>
 <% end %>
