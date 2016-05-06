@@ -9,7 +9,7 @@
       <%= link_to root_path, :class => 'navbar-brand' do %>
         <%= image_tag 'teniss_001.png' %> <small>TiAju Cup</small>
       <% end %>
-      <div class='navbar-collapse navbar-right'>
+      <div class='navbar-collapse collapse navbar-responsive-collapse navbar-right'>
         <ul class='nav navbar-nav'>
           <li><%= link_to 'HOME', root_path %></li>
           <li class='dropdown'>
@@ -34,8 +34,7 @@
       <%= link_to root_path, :class => 'navbar-brand' do %>
         <%= image_tag 'teniss_001.png' %> <small>TiAju Cup</small>
       <% end %>
-     <!--  <div class='navbar-collapse collapse navbar-responsive-collapse navbar-right'> -->
-     <div class='navbar-collapse navbar-right'>
+      <div class='navbar-collapse collapse navbar-responsive-collapse navbar-right'>
         <ul class='nav navbar-nav'>
           <li><%= link_to "会員登録", new_user_registration_path, method: :get %></li>
           <li><%= link_to "ログイン", new_user_session_path, method: :get %></li>
