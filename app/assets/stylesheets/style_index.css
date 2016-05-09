@@ -54,7 +54,7 @@ display: inline;
 }
 
 .logo a{
-font-size:30px;
+font-size:36px;
 font-weight:bold;
 line-height:1;
 display: inline;
@@ -73,7 +73,8 @@ font-weight:normal;
 
 .info{
 float:right;
-padding:20px 0;
+padding-top: 8px;
+font-size: 20px;
 }
 
 .tel strong{
@@ -396,10 +397,11 @@ tbody {
   }
   
 }
+
 /* モニター幅960px以下 */
 @media only screen and (max-width:960px){
   #header h1,#header .logo{padding-left:10px;}
-  #header .info{padding-right:10px;}
+  #header .info{padding: 0px 0px;font-size: 17px;}
   
   ul#topnav{
   clear:both;
@@ -469,7 +471,7 @@ tbody {
   
   #sub .grid{padding-bottom:20px;}
   
-  #footer{padding:0;}
+  #footer{padding:0;    margin-right: 0px;}
   
   #footer .grid{
   float:none;
@@ -536,3 +538,6 @@ tbody {
     font-size: 50%;
 }
 }
+
+ 
+ #footer{padding:0;margin-right: 24px;}

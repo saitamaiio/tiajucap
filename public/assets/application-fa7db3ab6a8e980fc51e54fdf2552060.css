@@ -3385,7 +3385,7 @@ tbody {
   
   #sub .grid{padding-bottom:20px;}
   
-  #footer{padding:0;}
+  #footer{padding: 0px;margin-right: 24px;}
   
   #footer .grid{
   float:none;
