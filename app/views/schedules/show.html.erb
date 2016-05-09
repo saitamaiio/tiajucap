@@ -1,5 +1,5 @@
 <% if user_signed_in? %>
-<section id="ticket-info" class="section-large">
+<div id="ticket-info" class="section-large">
 <p class="h-large h-large-ico ticket-info">チケット情報</p>
   <div class="box">
     <div class="module-ticket-info clearfix">
@@ -27,11 +27,11 @@
       </div>
     </div>
   </div>
-</section>
-<div class="form_schedule">
+</div>
+<div class='ticket_form'>
   <%= form_tag('/schedules', method: :post) do %>
     <%= hidden_field :schedule, :id %>
-    <input type="submit">
+    <input type="submit" value='商品チケットを購入する'>
   <% end %>
 </div>
   <p>開催地マップ</p>
