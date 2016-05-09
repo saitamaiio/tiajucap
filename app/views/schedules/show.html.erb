@@ -39,4 +39,42 @@
   <div id="map-canvas">地図が表示されない場合は更新ボタンを押してください</div>
 </div>
 <% else %>
+<div id="ticket-info" class="section-large">
+<p class="h-large h-large-ico ticket-info">チケット情報</p>
+  <div class="box">
+    <div class="module-ticket-info clearfix">
+      <div class ="main">
+        <table>
+          <tread>
+              <tr>
+                <th>会場</th>
+                <th>日時</th>
+                <th>種目</th>
+                <th>定員</th>
+                <th>申し込み期間</th>
+              </tr>
+          </tread>
+          <tbody>
+              <tr>
+                <td><%= @schedule.place %></td>
+                <td><%= @schedule.date %></td>
+                <td><%= @schedule.content %></td>
+                <td><%= @schedule.people %></td>
+                <td><%= @schedule.kikan %></td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='ticket_form'>
+  <p>チケットを購入するためには、「会員登録」または「ログイン」をしてください。</p>
+  <a href="/users/sign_up">会員登録</a>
+  <a href="/users/sign_in">ログイン</a>
+</div>
+  <p>開催地マップ</p>
+<div class="map-embed">
+  <div id="map-canvas">地図が表示されない場合は更新ボタンを押してください</div>
+</div>
 <% end %>
