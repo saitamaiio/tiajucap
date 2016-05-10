@@ -405,6 +405,10 @@ tbody {
 .tel p{
     padding: 5px 0;
 }
+
+div#gallery {
+    padding: 20px 0;
+}
 /* モニター幅960px以下 */
 @media only screen and (max-width:960px){
   #header h1,#header .logo{padding-left:10px;}
