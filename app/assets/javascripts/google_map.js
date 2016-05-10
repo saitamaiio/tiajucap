@@ -13,4 +13,13 @@ var mapOptions = {
 
 // [canvas]に、[mapOptions]の内容の、地図のインスタンス([map])を作成する
 var map = new google.maps.Map( canvas , mapOptions ) ;
+
+// マーカーのインスタンスは配列で管理しよう
+var markers = [] ;
+
+// マーカーのインスタンスを作成する
+markers[0] = new google.maps.Marker({
+  map: map ,
+  position: new google.maps.LatLng(35.9079725 , 139.6193528) ,
+}) ;
 }
