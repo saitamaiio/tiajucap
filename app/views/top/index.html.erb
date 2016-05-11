@@ -7,7 +7,7 @@
     <!-- / ロゴ -->
     <!-- 電話番号+受付時間 -->
     <div class="info">
-      <p class="tel">電話: <strong>012-3456-7890</strong></p>
+      <p class="tel">電話: <strong>050-5307-6953</strong></p>
       <p>受付時間: 平日 AM 10:00 〜 PM 5:00</p>
     </div>
     <!-- / 電話番号+受付時間 -->
@@ -62,14 +62,26 @@
         <% @schedules.each do |schedule| %>
         <tbody>
           <tr>
+            <% if (schedule.people - schedule.users.length) >= 4  %>
             <td><%= schedule.place %></td>
             <td><%= schedule.date %></td>
             <td><%= link_to "#{schedule.content}", "/schedules/" + "#{schedule.id}", "data-turbolinks-track" => true, :method => "get"%></td>
-            <td><%= schedule.users.length %>/<%= schedule.people %></td>
+            <td><%= schedule.people %></td>
             <td><%= schedule.kikan %></td>
-            <% if schedule.users.length < schedule.people %>
             <td><a href="/schedules/<%= schedule.id %>">購入</td>
-            <% elsif schedule.users.length >= schedule.people %>
+            <% elsif 4 > (schedule.people - schedule.users.length) && (schedule.people - schedule.users.length) >= 1 %>
+            <td><%= schedule.place %></td>
+            <td><%= schedule.date %></td>
+            <td><%= link_to "#{schedule.content}", "/schedules/" + "#{schedule.id}", "data-turbolinks-track" => true, :method => "get"%></td>
+            <td><%= schedule.people %></td>
+            <td><%= schedule.kikan %></td>
+            <td><a href="/schedules/<%= schedule.id %>">購入</td>
+            <% elsif (schedule.people - schedule.users.length) <= 0 %>
+            <td><%= schedule.place %></td>
+            <td><%= schedule.date %></td>
+            <td><%=schedule.content%></td>
+            <td><%= schedule.people %></td>
+            <td><%= schedule.kikan %></td>
             <td>無</td>
             <% end %>
           </tr>
