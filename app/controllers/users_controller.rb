@@ -13,12 +13,14 @@ class UsersController < ApplicationController
     end
   end
 
-  # def destroy
-  #   @user = User.find(params[:id])
-  #   if user.user_id == current_user.id
-  #     tweet.destroy
-  #   end
-  # end
+  def destroy
+    @user = User.find(params[:id])
+    @schedule = Schedule.find(params[:schedule_id])
+    if @user.id == current_user.id
+     @schedule_kk = Schedulesuser.find_by(user_id: @user.id, schedule_id: params[:schedule_id])
+     @schedule_kk.destroy
+    end
+  end
 
   private
   def update_params

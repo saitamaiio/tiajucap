@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "top#index"
   resources :schedules, only: [:show,:index,:create,:new]
-  resources :users, only: [:show, :edit, :update, :destroy]
+  resources :users, only: [:show, :edit, :update,]
+  delete '/users/:id/:schedule_id' => 'users#destroy'
   get 'contact' => 'top#contact'
   get 'member' => 'top#member'
 end

@@ -58,7 +58,7 @@
               <td><a href="/schedules/<%= thing.id %>"><%= thing.content %></td>
               <td><%= thing.people %></td>
               <td><%= thing.kikan %></td>
-              <td>削除</td>
+              <td><%= link_to '削除', "/users/#{@user.id}/#{thing.id}", method: :delete %></td>
             </tr>
           </tbody>
           <% end %>
