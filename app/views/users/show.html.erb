@@ -46,7 +46,7 @@
                 <th>日時</th>
                 <th>種目</th>
                 <th>定員</th>
-                <th>申し込み期間</th>
+                <th>価格</th>
                 <th>チケットを取り消す</th>
               </tr>
           </tread>
@@ -57,7 +57,7 @@
               <td><%= thing.date %></td>
               <td><a href="/schedules/<%= thing.id %>"><%= thing.content %></td>
               <td><%= thing.people %></td>
-              <td><%= thing.kikan %></td>
+              <td><%= thing.price %></td>
               <td><%= link_to '削除', "/users/#{@user.id}/#{thing.id}", method: :delete %></td>
             </tr>
           </tbody>
