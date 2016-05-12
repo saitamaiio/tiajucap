@@ -31,10 +31,10 @@
 <div id="wrapper">
 
   <!-- 4カラム -->
-  <section id="one" class="gridWrapper">
+  <div id="one" class="gridWrapper">
     <article>
       <h3>試合スケジュール</h3>
-      <table>
+      <table >
         <tread>
           <tr>
             <th>会場</th>
@@ -75,9 +75,12 @@
         <% end %>
       </table>
     </article>
+  </div>
+  <div id="two" class="gridWrapper">
     <article>
-      <h3>本日の試合のお知らせ</h3>
-      <p>雨天のため中止とさせていただきます。</p>
+      <h3>直近の試合のお知らせ</h3>
+      <p>5/19(木)10:30 秋ヶ瀬公園での試合は開催致します。<br>現在も参加者を募集しております。<br>ご気軽のご応募ください！</p>
     </article>
-  </section>
+  </div>
 </div>
+<%= render partial: 'common/footer' %>
