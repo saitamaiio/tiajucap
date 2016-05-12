@@ -2,10 +2,10 @@ class CreateSchedules < ActiveRecord::Migration
   def change
     create_table :schedules do |t|
       t.string :place
-      t.text :date
-      t.text :content
+      t.string :date
+      t.string :content
       t.integer :people
-      t.text :kikan
+      t.string :price
       t.timestamps
     end
   end

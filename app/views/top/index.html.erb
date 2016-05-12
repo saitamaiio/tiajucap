@@ -67,21 +67,21 @@
             <td><%= schedule.date %></td>
             <td><%= link_to "#{schedule.content}", "/schedules/" + "#{schedule.id}", "data-turbolinks-track" => true, :method => "get"%></td>
             <td><%= schedule.people %></td>
-            <td><%= schedule.kikan %></td>
+            <td><%= schedule.price %></td>
             <td><a href="/schedules/<%= schedule.id %>">購入</td>
             <% elsif 4 > (schedule.people - schedule.users.length) && (schedule.people - schedule.users.length) >= 1 %>
             <td><%= schedule.place %></td>
             <td><%= schedule.date %></td>
             <td><%= link_to "#{schedule.content}", "/schedules/" + "#{schedule.id}", "data-turbolinks-track" => true, :method => "get"%></td>
             <td><%= schedule.people %></td>
-            <td><%= schedule.kikan %></td>
+            <td><%= schedule.price %></td>
             <td><a href="/schedules/<%= schedule.id %>">購入</td>
             <% elsif (schedule.people - schedule.users.length) <= 0 %>
             <td><%= schedule.place %></td>
             <td><%= schedule.date %></td>
             <td><%=schedule.content%></td>
             <td><%= schedule.people %></td>
-            <td><%= schedule.kikan %></td>
+            <td><%= schedule.price %></td>
             <td>無</td>
             <% end %>
           </tr>

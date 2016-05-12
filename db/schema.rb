@@ -15,10 +15,10 @@ ActiveRecord::Schema.define(version: 20160426083016) do
 
   create_table "schedules", force: :cascade do |t|
     t.string   "place",      limit: 255
-    t.text     "date",       limit: 65535
-    t.text     "content",    limit: 65535
+    t.string   "date",       limit: 255
+    t.string   "content",    limit: 255
     t.integer  "people",     limit: 4
-    t.text     "kikan",      limit: 65535
+    t.string   "price",      limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
