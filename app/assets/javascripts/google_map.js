@@ -3,7 +3,7 @@ window.onload = function(){
 var canvas = document.getElementById( 'map-canvas' ) ;
 
 // 中心の位置座標を指定する
-var latlng = new google.maps.LatLng(35.9079725 , 139.6193528);
+var latlng = new google.maps.LatLng(35.8488658 , 139.603112);
 
 // 地図のオプションを設定する
 var mapOptions = {
@@ -20,6 +20,6 @@ var markers = [] ;
 // マーカーのインスタンスを作成する
 markers[0] = new google.maps.Marker({
   map: map ,
-  position: new google.maps.LatLng(35.9079725 , 139.6193528) ,
+  position: new google.maps.LatLng(35.8488658 , 139.603112) ,
 }) ;
 }
