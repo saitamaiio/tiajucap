@@ -65,7 +65,7 @@
             <% if (schedule.people - schedule.users.length) >= 4  %>
             <td><%= schedule.place %></td>
             <td><%= schedule.date %></td>
-            <td><%= link_to "#{schedule.content}", "/schedules/" + "#{schedule.id}", "data-turbolinks-track" => true, :method => "get"%></td>
+            <td><%= link_to "#{schedule.content}", "/schedules/" + "#{schedule.id}", "data-turbolinks-track" => true, :method => "get" ,:class => "google-pass#{schedule.id}"%></td>
             <td><%= schedule.people %></td>
             <td><%= schedule.price %></td>
             <td><a href="/schedules/<%= schedule.id %>">購入</td>
@@ -75,7 +75,7 @@
             <td><%= link_to "#{schedule.content}", "/schedules/" + "#{schedule.id}", "data-turbolinks-track" => true, :method => "get"%></td>
             <td><%= schedule.people %></td>
             <td><%= schedule.price %></td>
-            <td><a href="/schedules/<%= schedule.id %>">購入</td>
+            <td><a href="/schedules/<%= schedule.id %>">在庫僅か</td>
             <% elsif (schedule.people - schedule.users.length) <= 0 %>
             <td><%= schedule.place %></td>
             <td><%= schedule.date %></td>
