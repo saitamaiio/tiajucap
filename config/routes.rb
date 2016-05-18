@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   delete '/users/:id/:schedule_id' => 'users#destroy'
   get 'contact' => 'top#contact'
   get 'member' => 'top#member'
+  get 'links' => 'top#link'
 end

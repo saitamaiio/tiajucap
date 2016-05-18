@@ -8,4 +8,7 @@ class TopController < ApplicationController
 
   def member
   end
+
+  def link
+  end
 end
