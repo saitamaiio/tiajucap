@@ -11,4 +11,7 @@ class TopController < ApplicationController
 
   def link
   end
+
+  def photos
+  end
 end

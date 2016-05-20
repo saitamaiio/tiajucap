@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get 'contact' => 'top#contact'
   get 'member' => 'top#member'
   get 'links' => 'top#link'
+  get 'photos' => 'top#photo'
 end

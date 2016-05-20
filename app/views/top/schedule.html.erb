@@ -48,7 +48,14 @@
         <% @schedules.each do |schedule| %>
         <tbody>
           <tr>
-            <% if (schedule.people - schedule.users.length) >= 4  %>
+            <% if schedule.date == "5/19(木)10:30"  %>
+            <td><%= schedule.place %></td>
+            <td><%= schedule.date %></td>
+            <td><%=schedule.content%></td>
+            <td><%= schedule.people %></td>
+            <td><%= schedule.price %></td>
+            <td>終了</td>
+            <% elsif (schedule.people - schedule.users.length) >= 4  %>
             <td><%= schedule.place %></td>
             <td><%= schedule.date %></td>
             <td><%= link_to "#{schedule.content}", "/schedules/" + "#{schedule.id}", "data-turbolinks-track" => true, :method => "get"%></td>
