@@ -492,7 +492,7 @@ div#gallery {
   }
 }
 td, th { 
-  padding: 10px; 
+  padding: 20px; 
   border: 1px solid #ccc; 
   text-align: left; 
 }
@@ -540,7 +540,7 @@ tbody {
   #mainBanner h2,#mainBanner h3{font-size:80%;}
 
   td, th { 
-  padding: 6px; 
+  padding: 3px; 
   border: 1px solid #ccc; 
   text-align: left; 
 }
